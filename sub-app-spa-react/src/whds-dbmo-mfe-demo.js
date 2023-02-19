@@ -9,8 +9,12 @@ const lifecycles = singleSpaReact({
   rootComponent: Root,
   errorBoundary(err, info, props) {
     // Customize the root error boundary for your microfrontend here.
-    return null;
+    return <div>Error</div>;
   },
+  loadRootComponent: () =>
+    import(
+    /* webpackChunkName: "people-root-component" */ "./root.component.js"
+    ).then((mod) => mod.default),
 });
 
 export const { bootstrap, mount, unmount } = lifecycles;

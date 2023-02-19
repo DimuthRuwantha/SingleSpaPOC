@@ -52,8 +52,7 @@
         "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
         "@whds-dbmo/mfe-demo": "http://localhost:8080/whds-dbmo-mfe-demo.js",
-        "@whds-dbmo/root-config": "//localhost:9000/whds-dbmo-root-config.js",
-        "mfe-demo-ng": "http://localhost:4200/main.js"
+        "@whds-dbmo/root-config": "//localhost:9000/whds-dbmo-root-config.js"
       }
     }
   </script>
@@ -74,28 +73,30 @@
           <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
           <% } %>
 
-            <application name="@whds-dbmo/mfe-demo"></application>
-            <!-- <template id="single-spa-layout">
-              <single-spa-router>
-                <nav class="topnav">
+            <!-- <application name="@whds-dbmo/mfe-demo"></application> -->
+            <template id="single-spa-layout">
+              <nav class="topnav">
+                <Link key="people" className="p-6" to="/people">
+                People
+                </Link>
+              </nav>
+              <div class="main-content mt-16">
+                <route path="people">
                   <application name="@whds-dbmo/mfe-demo"></application>
-                </nav> -->
-            <!-- <div class="main-content mt-16">
-        <route path="people">
-          <application name="@react-mf/people"></application>
-        </route>
-        <route path="planets">
-          <application name="@react-mf/planets"></application>
-        </route>
-        <redirect from="/earth" to="/planets"></redirect>
-        <route default>
-          <h1 class="flex flex-row justify-center p-16">
-            <p class="max-w-md">This example project shows independently built and deployed microfrontends that use React and single-spa. Each nav link above takes you to a different microfrontend.</p>
-          </h1>
-        </route>
-      </div> -->
-            <!-- </single-spa-router>
-            </template> -->
+                </route>
+                <!-- <route path="planets">
+                  <application name="@react-mf/planets"></application>
+                </route>
+                <redirect from="/earth" to="/planets"></redirect> -->
+                <route default>
+                  <h1 class="flex flex-row justify-center p-16">
+                    <p class="max-w-md">This example project shows independently built and deployed microfrontends that
+                      use React and single-spa. Each nav link above takes you to a different microfrontend.</p>
+                  </h1>
+                </route>
+              </div>
+              </single-spa-router>
+            </template>
 
 </head>
 

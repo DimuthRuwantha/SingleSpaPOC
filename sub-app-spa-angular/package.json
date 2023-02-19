@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:single-spa:mfe-demo-ng": "ng build mfe-demo-ng --configuration production",
-    "serve:single-spa:mfe-demo-ng": "ng s --project mfe-demo-ng --disable-host-check --port 4200 --live-reload false"
+    "serve:single-spa:mfe-demo-ng": "ng s --project mfe-demo-ng --disable-host-check --port 4300 --live-reload false"
   },
   "private": true,
   "dependencies": {

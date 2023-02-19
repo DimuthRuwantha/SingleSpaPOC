@@ -36,7 +36,7 @@
               "libraryName": "mfe-demo-ng",
               "libraryTarget": "umd"
             },
-            "deployUrl": "http://localhost:4200/"
+            "deployUrl": "http://localhost:4300/"
           },
           "configurations": {
             "production": {
@@ -79,7 +79,8 @@
               "browserTarget": "mfe-demo-ng:build:production"
             },
             "development": {
-              "browserTarget": "mfe-demo-ng:build:development"
+              "browserTarget": "mfe-demo-ng:build:development",
+              "port": 4400
             }
           },
           "defaultConfiguration": "development"
